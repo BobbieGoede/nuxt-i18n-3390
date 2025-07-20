@@ -50,9 +50,7 @@ jobs:
       #     static_site_generator: nuxt
 
       - name: Static HTML export with Nuxt
-        run: pnpm generate
-        env:
-          NITRO_PRESET: github_pages
+        run: pnpm build --preset github-pages
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
